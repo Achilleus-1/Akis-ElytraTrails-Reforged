@@ -4,7 +4,9 @@
   <img src="docs/cover.png" alt="Aki Elytra Trails Reforged cover artwork" width="320" height="320">
 </p>
 
-**[Product of Achilleus](https://linktr.ee/achilleus_)** — Created and maintained by [Achilleus (Achilleus-1)](https://github.com/Achilleus-1).
+**[Product of Achilleus](https://linktr.ee/achilleus_)** — NeoForge port and maintenance by [Achilleus (Achilleus-1)](https://github.com/Achilleus-1).
+
+Unofficial Minecraft mod; not approved by or affiliated with Mojang or Microsoft.
 
 Pretty trails while flying with an elytra, with presets, wingtip settings, twirls, and optional arrow and allay trails.
 
@@ -14,7 +16,7 @@ Pretty trails while flying with an elytra, with presets, wingtip settings, twirl
 
 ## Installation
 
-For **Minecraft 1.21.1**, **NeoForge 21.1.255 or newer in the 21.1 series**, and **Java 21**. Place `aki-elytra-trails-reforged-1.21.1-1.4.9-neoforge.5.jar` in your `mods` folder. Remove older copies and the original Fabric Elytra Contrails JAR first. Download it from [Releases](https://github.com/Achilleus-1/Akis-ElytraTrails-Reforged/releases/latest), or build it using the instructions below.
+For **Minecraft 1.21.1**, **NeoForge 21.1.255 or newer in the 21.1 series**, and **Java 21**. Place `aki-elytra-trails-reforged-1.21.1-1.4.9-neoforge.6.jar` in your `mods` folder. Remove older copies and the original Fabric Elytra Contrails JAR first. Download it from [Releases](https://github.com/Achilleus-1/Akis-ElytraTrails-Reforged/releases/latest), or build it using the instructions below.
 
 The mod has no required third-party mod dependencies. For the graphical settings screen, optionally install **Cloth Config 15.0.140 or newer for NeoForge / Minecraft 1.21.1**. Open settings through NeoForge's Mods screen or assign **Open Settings** in **Options → Controls → Key Binds → Aki Elytra Trails Reforged Keybinds**. Twirl, toggle, and settings bindings start unbound. Without Cloth Config, edit `config/elytratrails.json` while the game is closed.
 
@@ -32,10 +34,12 @@ Launch the development client with `./gradlew runClient` or `.\gradlew.bat runCl
 
 Iris and EMF detection are optional. Shader packs, Fresh Animations, EMF model variants, startup, and multiplayer require in-game verification. Flashback and Custom Player Models integrations from upstream 1.21.11 are not implemented in this port.
 
+[Branding assets](BRANDING.md) include the mod icon, original cover, and GitHub social preview.
+
 ## Attribution
 
-Ported from [Elytra Contrails](https://github.com/dbrighthd/elytratrails) by dbrighthd.
+Unofficial NeoForge port of [Elytra Contrails](https://github.com/dbrighthd/elytratrails) by **dbrighthd**. Port development and maintenance by **Achilleus (Achilleus-1)**. Original creators retain rights to their contributions.
 
-Licensed under **MPL-2.0**; copyright and license notices are included in [LICENSE](LICENSE) and packaged resources. Source is available in [this repository](https://github.com/Achilleus-1/Akis-ElytraTrails-Reforged).
+The mod code is licensed under **MPL-2.0**. Full license notices are retained in [LICENSE](LICENSE) and packaged resources. See [LEGAL.md](LEGAL.md) for upstream revisions, asset scope, and redistribution requirements.
 
-[Branding assets](BRANDING.md) include the mod icon, original cover, and GitHub social preview.
+Corresponding source and port modifications are available in [this repository](https://github.com/Achilleus-1/Akis-ElytraTrails-Reforged) and its release tags under MPL-2.0.
