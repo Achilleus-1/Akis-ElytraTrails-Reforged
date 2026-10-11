@@ -14,7 +14,7 @@ logoFile="icon.png"
 description='''Product of Achilleus.
 https://linktr.ee/achilleus_
 
-Elytra trails, presets, wingtip settings, twirls, and optional arrow and allay trails. Created and maintained by Achilleus for NeoForge 1.21.1.'''
+Elytra trails, presets, wingtip settings, twirls, and optional arrow and allay trails. Unofficial NeoForge 1.21.1 port maintained by Achilleus. Original mod by dbrighthd.'''
 
 [[dependencies.${mod_id}]]
 modId="neoforge"

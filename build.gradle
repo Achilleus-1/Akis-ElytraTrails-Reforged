@@ -8,6 +8,7 @@ group = mod_group_id
 base { archivesName = "${mod_archive_name}-${minecraft_version}" }
 java {
     toolchain.languageVersion = JavaLanguageVersion.of(java_version as int)
+    withSourcesJar()
 }
 sourceSets.main {
     java.srcDir 'src/client/java'
@@ -39,6 +40,10 @@ jar {
         'Implementation-Vendor': 'Achilleus (Achilleus-1)',
         'Built-On-Minecraft': minecraft_version
     )
+}
+
+tasks.named('sourcesJar', Jar) {
+    from('LICENSE')
 }
 
 // Keep packaged mod metadata in sync with gradle.properties.
