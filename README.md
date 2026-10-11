@@ -4,6 +4,10 @@
 
 Pretty trails while flying with an elytra, with presets, wingtip settings, twirls, and optional arrow and allay trails.
 
+## Demo
+
+![Gameplay demo of Aki Elytra Trails Reforged](docs/demo.gif)
+
 ## Installation
 
 For **Minecraft 1.21.1**, **NeoForge 21.1.255 or newer in the 21.1 series**, and **Java 21**. Place `aki-elytra-trails-reforged-1.21.1-1.4.9-neoforge.3.jar` in your `mods` folder. Remove older copies and the original Fabric Elytra Contrails JAR first. Download it from [Releases](https://github.com/Achilleus-1/Akis-ElytraTrails-Reforged/releases/latest), or build it using the instructions below.
