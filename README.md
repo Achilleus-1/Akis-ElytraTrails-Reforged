@@ -16,7 +16,7 @@ Pretty trails while flying with an elytra, with presets, wingtip settings, twirl
 
 ## Installation
 
-For **Minecraft 1.21.1**, **NeoForge 21.1.255 or newer in the 21.1 series**, and **Java 21**. Place `aki-elytra-trails-reforged-1.21.1-1.4.9-neoforge.6.jar` in your `mods` folder. Remove older copies and the original Fabric Elytra Contrails JAR first. Download it from [Releases](https://github.com/Achilleus-1/Akis-ElytraTrails-Reforged/releases/latest), or build it using the instructions below.
+For **Minecraft 1.21.1**, **NeoForge 21.1.255 or newer in the 21.1 series**, and **Java 21**. Place `aki-elytra-trails-reforged-1.21.1-1.4.9-neoforge.7.jar` in your `mods` folder. Remove older copies and the original Fabric Elytra Contrails JAR first. Download it from [Releases](https://github.com/Achilleus-1/Akis-ElytraTrails-Reforged/releases/latest), or build it using the instructions below.
 
 The mod has no required third-party mod dependencies. For the graphical settings screen, optionally install **Cloth Config 15.0.140 or newer for NeoForge / Minecraft 1.21.1**. Open settings through NeoForge's Mods screen or assign **Open Settings** in **Options → Controls → Key Binds → Aki Elytra Trails Reforged Keybinds**. Twirl, toggle, and settings bindings start unbound. Without Cloth Config, edit `config/elytratrails.json` while the game is closed.
 
@@ -36,10 +36,10 @@ Iris and EMF detection are optional. Shader packs, Fresh Animations, EMF model v
 
 [Branding assets](BRANDING.md) include the mod icon, original cover, and GitHub social preview.
 
-## Attribution
+## License and credits
 
-Unofficial NeoForge port of [Elytra Contrails](https://github.com/dbrighthd/elytratrails) by **dbrighthd**. Port development and maintenance by **Achilleus (Achilleus-1)**. Original creators retain rights to their contributions.
+Based on [Elytra Contrails](https://github.com/dbrighthd/elytratrails) by **dbrighthd**.
 
-The mod code is licensed under **MPL-2.0**. Full license notices are retained in [LICENSE](LICENSE) and packaged resources. See [LEGAL.md](LEGAL.md) for upstream revisions, asset scope, and redistribution requirements.
+**MPL-2.0** — see [LICENSE](LICENSE) and [LEGAL.md](LEGAL.md).
 
-Corresponding source and port modifications are available in [this repository](https://github.com/Achilleus-1/Akis-ElytraTrails-Reforged) and its release tags under MPL-2.0.
+[Source for this release](https://github.com/Achilleus-1/Akis-ElytraTrails-Reforged/tree/v1.4.9-neoforge.7), including modifications, is available under MPL-2.0.
