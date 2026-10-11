@@ -10,7 +10,7 @@ displayName="${mod_name}"
 displayURL="https://linktr.ee/achilleus_"
 authors="${mod_authors}"
 credits="Ported from Elytra Contrails by dbrighthd."
-logoFile="assets/achilleus/achilleus-logo-white.png"
+logoFile="icon.png"
 description='''Product of Achilleus.
 https://linktr.ee/achilleus_
 
