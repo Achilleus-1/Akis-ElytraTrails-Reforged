@@ -12,6 +12,7 @@
     "ElytraLayerMixin",
     "EquipmentElytraModelAccessor",
     "GameRendererMixin",
+    "HumanoidArmorLayerMixin",
     "LevelRendererMixin",
     "ModelPartChildrenAccessor",
     "LivingEntityTrailMixin",

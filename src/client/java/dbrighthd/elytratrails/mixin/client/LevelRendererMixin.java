@@ -4,6 +4,7 @@ import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.mojang.blaze3d.vertex.PoseStack;
 import dbrighthd.elytratrails.rendering.FakeMultiBufferSource;
+import dbrighthd.elytratrails.rendering.TrailManager;
 import net.minecraft.client.Camera;
 import net.minecraft.client.renderer.LevelRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -19,7 +20,7 @@ import static dbrighthd.elytratrails.ElytraTrailsClient.getConfig;
 public abstract class LevelRendererMixin {
 
     @Unique
-    private boolean elytratrails$realCameraDetachedThisFrame = false;
+    private boolean elytratrails$hiddenCameraEntityPass = false;
 
     @Unique
     private Entity elytratrails$cameraEntityThisFrame = null;
@@ -37,14 +38,19 @@ public abstract class LevelRendererMixin {
     ) {
         boolean realDetached = original.call(camera);
 
-        this.elytratrails$realCameraDetachedThisFrame = realDetached;
         this.elytratrails$cameraEntityThisFrame = camera.getEntity();
+        this.elytratrails$hiddenCameraEntityPass = false;
 
-        if (getConfig().forceHiddenEntityRenderPass && !realDetached) {
-            return true;
+        var config = getConfig();
+        if (config.forceHiddenEntityRenderPass && config.enableAllTrails && !realDetached
+                && this.elytratrails$cameraEntityThisFrame instanceof Player player && !player.isSleeping()) {
+            var trailConfig = TrailManager.getConfigFromPlayerId(player.getId());
+            this.elytratrails$hiddenCameraEntityPass = trailConfig.enableTrail()
+                    && TrailManager.isPlayerTrailValid(trailConfig, player);
         }
 
-        return realDetached;
+        // Reuse this decision below: an entity admitted here must use the discard buffer.
+        return realDetached || this.elytratrails$hiddenCameraEntityPass;
     }
 
     @WrapOperation(
@@ -56,11 +62,8 @@ public abstract class LevelRendererMixin {
     )
     private void elytratrails$renderCameraEntityIntoNothingBufferOnlyWhenActuallyFirstPerson(LevelRenderer instance, Entity entity, double camX, double camY, double camZ, float partialTick, PoseStack poseStack, MultiBufferSource realBufferSource, Operation<Void> original
     ) {
-        boolean shouldUseFakeBuffer = false;
-        if(entity instanceof Player player)
-        {
-            shouldUseFakeBuffer = getConfig().forceHiddenEntityRenderPass && !this.elytratrails$realCameraDetachedThisFrame && entity == this.elytratrails$cameraEntityThisFrame && !player.isSleeping();
-        }
+        boolean shouldUseFakeBuffer = this.elytratrails$hiddenCameraEntityPass
+                && entity == this.elytratrails$cameraEntityThisFrame;
         original.call(instance, entity, camX, camY, camZ, partialTick, poseStack, shouldUseFakeBuffer ? FakeMultiBufferSource.INSTANCE : realBufferSource
         );
 
