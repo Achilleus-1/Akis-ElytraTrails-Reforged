@@ -460,6 +460,9 @@ public class ConfigScreenBuilder {
             ContinuousTwirlController.setDurations();
             ConfigManager.save();
             var mc = Minecraft.getInstance();
+            // Cloth saves the key entries before this explicit settings-save callback.
+            // Persist them here, after startup, without changing other assignments.
+            mc.options.save();
             refreshLocalConfigs();
             if (mc.getConnection() != null && mc.player != null && mc.level != null) {
                 TrailSystem.getTrailManager().removeTrail(mc.player.getId());
